@@ -1,0 +1,8 @@
+<div class="row">
+  <button class="row__button" (click)="onRemove()">
+    remove
+  </button>
+  <div class="row__element" *ngFor="let el of elements">
+    {{ el }}
+  </div>
+</div>
