@@ -7,10 +7,10 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 })
 export class RowComponent {
   @Input()
-  elements: string[] = [];
+  public elements: string[] = [];
 
   @Output()
-  remove = new EventEmitter();
+  public remove:EventEmitter<void> = new EventEmitter();
 
   onRemove() {
     this.remove.next();

@@ -6,12 +6,12 @@ import { Component, Output, EventEmitter } from "@angular/core";
   styleUrls: ["./input.component.scss"]
 })
 export class InputComponent {
-  text = "";
+  public text: string = "";
 
   @Output()
-  value = new EventEmitter();
+  public value: EventEmitter<string> = new EventEmitter();
 
-  onSubmit() {
+  public onSubmit(): void {
     if (!this.text) {
       return;
     }

@@ -12,3 +12,5 @@ export class RemoveRow implements Action {
   type = REMOVE_ROW
   constructor(public payload: number) {}
 }
+
+export type splitterActions = AddRow | RemoveRow;

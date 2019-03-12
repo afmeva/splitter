@@ -4,10 +4,10 @@ import { splitterStore } from './splitter.reducer';
 
 const selectSplitter = createFeatureSelector<splitterStore>("splitter");
 
-const padding = (length:number) => (row: string[]) => {
+const padding = (length:number) => (row: string[]):string[] => {
   const lengthDiff = length - row.length;
 
-  return [...row, ...new Array(lengthDiff)]
+  return [...row, ...new Array(lengthDiff).fill("")]
 }
 
 export const getRows = createSelector(

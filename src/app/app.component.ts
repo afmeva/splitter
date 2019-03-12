@@ -11,23 +11,23 @@ import { getRows, getRemoved, getColumnNumber } from "./store/splitter.selectors
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent implements OnInit {
-  rows: Observable<Array<string[]>>;
-  removed: Observable<number>;
-  columnNumber: Observable<number>;
+  public rows: Observable<Array<string[]>>;
+  public removed: Observable<number>;
+  public columnNumber: Observable<number>;
 
   constructor(private store: Store<splitterStore>) {}
 
-  ngOnInit() {
+  public ngOnInit():void {
     this.rows = this.store.select(getRows);
     this.removed = this.store.select(getRemoved);
     this.columnNumber = this.store.select(getColumnNumber);
   }
 
-  onText(text: string) {
+  public onText(text: string):void {
     this.store.dispatch(new AddRow(text));
   }
 
-  onRemove(index: number) {
+  public onRemove(index: number):void {
     this.store.dispatch(new RemoveRow(index));
   }
 }

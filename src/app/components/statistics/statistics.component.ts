@@ -7,7 +7,7 @@ import { Component, Input } from "@angular/core";
   styleUrls: ["./statistics.component.scss"]
 })
 export class StatisticsComponent {
-  @Input() removed: number;
-  @Input() columnNumber: number;
-  @Input() elements: number;
+  @Input() public removed: number;
+  @Input() public columnNumber: number;
+  @Input() public elements: number;
 }
